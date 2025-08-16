@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background: rgb(93, 244, 255);
+    padding: 8px;
+} 
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.navbar a:hover {
+    background-color: rgb(255, 236, 68);
+    color: rgb(17, 14, 14);
+} 
+
+  
+.search-box {
+    margin-left: auto; 
+    display: flex;
+}
+
+.footer {
+    background-color: rgb(248, 203, 57);
+    grid-area:footer;
+    padding: 10px;
+    text-align: center;
+}
+.header {
+    grid-area: header;
+    background-color: rgb(20, 255, 157);
+    padding: 40px;
+    text-align: center;
+    font-size: 35px;
+}
+.p {
+    font-size: 13px;
+}
+.menu-btn {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+    
+.menu-btn:hover { background: #333; }
+    
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+th {
+    background: #a6f0f5;
+    color: rgb(82, 81, 74);
+}
+
+
+/* Layout หลัก (Content + Sidebar) */
+.container {
+    display: flex;
+    flex-direction: row; /* เปลี่ยนกลับเป็น row เพื่อให้ sidebar อยู่ทางซ้าย */
+    gap: 20px;
+    padding: 20px;
+}
+ 
+/* Content */
+.content {
+    flex: 1;
+}
+ 
+/* Sidebar */
+.sidebar {
+    background: yellow;
+    padding: 10px;
+    width: 200px;
+}
+ 
+.menu-btn {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+.menu-btn:hover { background: #333; }
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+}
+th, td {
+border: 1px solid black;
+padding: 8px;
+}
+th {
+background: #d32f2f;
+color: white;
+}
+/* Search box ใน Navbar */
+.search-box {
+    margin-left: auto; /* ดันไปชิดขวา */
+    display: flex;
+    }
+    
+    .search-box input {
+    padding: 6px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    }
+    
+    .search-box button {
+    padding: 6px 12px;
+    border: none;
+    background: purple;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    }
+    .search-box button:hover { background: darkviolet; }
+.sidebar {
+        position: absolute; /* กำหนดให้สามารถจัดตำแหน่งแบบตายตัวได้ */
+        right: 0;           /* ย้ายไปชิดขวา */
+        background: yellow;
+        padding: 10px;
+        width: 200px;
+}
+/* Layout สำหรับการเรียงรูปภาพแนวนอน */
+.image-gallery {
+    display: flex; /* กำหนดให้เป็น Flexbox container */
+    justify-content: center; /* จัดเรียงรูปภาพให้อยู่กึ่งกลาง */
+    gap: 30px; /* เพิ่มระยะห่างระหว่างรูปภาพ 30px */
+}
+
+/* สไตล์สำหรับรูปภาพแต่ละรูป */
+.centered-image {
+    width: 45%; /* ปรับให้เล็กลง เหลือ 25% ของความกว้างคอนเทนเนอร์ */
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
